@@ -17,20 +17,23 @@ const UserForm = ({ errors, touched, values, handleSubmit, status }) => {
     return ( 
         <div className="main-container">
             <h2>User Form</h2>
-            <Form>
+            <Form className="user-form">
                 <Field 
+                className="field"
                 type="text" 
                 name="name" 
                 placeholder="Enter Name"
                 />
                 {touched.name && errors.name && (<p>{errors.name}</p>)}
                 <Field 
+                    className="field"
                     type="email"
                     name="email"
                     placeholder="Enter email"
                 />
                 {touched.email && errors.email && (<p>{errors.email}</p>)}
                 <Field 
+                    className="field"
                     type="password"
                     name="password"
                     placeholder="Enter password"
@@ -39,6 +42,7 @@ const UserForm = ({ errors, touched, values, handleSubmit, status }) => {
                 <label>
                     Check box for User Agreement 
                 <Field 
+                    className="field"
                     type="checkbox"
                     name="agreement"
                     checked={values.agreement}
